@@ -1,0 +1,25 @@
+<!-- templates/edit.html -->
+<body>
+    <h2>Edit Task</h2>
+    <form action="/update/{{ task_id }}" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="updated_task" value="{{ task }}" required>
+                    </td>
+                    <td class="actions">
+                        <button type="submit"><i class="fas fa-save"></i>Update</button>
+                        <a href="/" class="cancel-link"><i class="fas fa-times"></i>Cancel</a>                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
